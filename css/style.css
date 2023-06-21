@@ -294,4 +294,8 @@ body {
         flex-direction: column;
         row-gap: 40px;
     }
+
+    .features__text {
+        text-align: center;
+    }
 }
