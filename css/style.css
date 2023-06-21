@@ -289,6 +289,31 @@ body {
     }
 }
 
+@media (max-width: 630px) {
+    .article__block_left, .article__block_right {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .article__image_side {
+        flex: 0 1 auto;
+        height: auto;
+        position: relative;
+        padding: 0 0 58% 0;
+    }
+
+    .article__image_side img {
+        object-position: 50% 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .article__block_column {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 445px) {
     .features__item {
         flex-direction: column;
