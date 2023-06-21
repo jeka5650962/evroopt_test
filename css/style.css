@@ -3,6 +3,7 @@
 :root {
     --color-green-1: #8dc63f;
     --color-green-2: #77a836;
+    --default-transition: all .3s ease 0s;
 }
 
 html, body {
@@ -77,10 +78,11 @@ body {
 .header__link {
     font-size: 16px;
     color: #000;
+    transition: var(--default-transition);
 }
 
 .header__link:hover {
-    text-decoration: underline;
+    color: var(--color-green-2);
 }
 
 .header__link.active {
@@ -126,6 +128,7 @@ body {
     background-color: var(--color-green-1);
     border-radius: 10px;
     color: inherit;
+    transition: var(--default-transition);
 }
 
 .banner__btn:hover {
