@@ -150,6 +150,8 @@ body {
     padding: 0 32px 0 44px;
     display: flex;
     column-gap: 40px;
+    max-width: 1224px;
+    margin: 0 auto;
 }
 
 .features__item {
@@ -187,7 +189,7 @@ body {
 
 .article__block_column {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     row-gap: 30px;
 }
 
@@ -226,7 +228,7 @@ body {
 .article__text {
     font-size: calc(16px + (22 - 16) * (100vw / 1920));
     flex: 0 1 50%;
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
 /* ---------------------------------------- FOOTER ---------------------------------------- */
