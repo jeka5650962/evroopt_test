@@ -64,29 +64,29 @@ body {
     max-width: 287px;
 }
 
-.header__menu {}
+.menu {}
 
-.header__list {
+.menu__list {
     display: flex;
 }
 
-.header__item {}
+.menu__item {}
 
-.header__item:not(:last-child) {
+.menu__item:not(:last-child) {
     margin: 0 20px 0 0;
 }
 
-.header__link {
+.menu__link {
     font-size: 16px;
     color: #000;
     transition: var(--default-transition);
 }
 
-.header__link:hover {
+.menu__link:hover {
     color: var(--color-green-2);
 }
 
-.header__link.active {
+.menu__link.active {
     color: var(--color-green-1);
 }
 
@@ -170,3 +170,20 @@ body {
 
 /* ---------------------------------------- FOOTER ---------------------------------------- */
 
+.footer {
+    padding: 35px 0 20px 0;
+    background-color: #888;
+}
+
+.footer__menu {
+    margin: 0 0 40px 0;
+}
+
+.menu__link_footer {
+    color: #fff;
+}
+
+.footer__copyright {
+    font-size: 17px;
+    color: #fff;
+}
