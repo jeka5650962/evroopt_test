@@ -297,7 +297,7 @@ body {
 }
 
 .footer__copyright {
-    font-size: 17px;
+    font-size: calc(14px + (17 - 14) * (100vw / 1920));
     color: #fff;
     line-height: 1.3;
 }
@@ -437,6 +437,10 @@ body {
 
     .article__text {
         font-size: calc(16px + (22 - 16 + (22 - 16) * 0.7) * ((100vw - 320px) / 1920));
+    }
+
+    .footer__copyright {
+        font-size: calc(14px + (17 - 14 + (17 - 14) * 0.7) * ((100vw - 320px) / 1920));
     }
 }
 
