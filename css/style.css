@@ -46,18 +46,42 @@ body {
 
 /* ---------------------------------------- BURGER ---------------------------------------- */
 
-.header__burger {}
+.header__burger {
+    display: none;
+}
 
 /* ---------------------------------------- HEADER ---------------------------------------- */
 
 .header {
     padding: 23px 0 37px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 2;
 }
 
 .header__body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+.header__logo {
+    position: relative;
+    z-index: 3;
 }
 
 .header__logo img {
@@ -66,6 +90,8 @@ body {
 
 .menu__list {
     display: flex;
+    position: relative;
+    z-index: 2;
 }
 
 .menu__item:not(:last-child) {
@@ -90,6 +116,7 @@ body {
 
 .page {
     flex: 1 1 auto;
+    padding: 120px 0 0 0;
 }
 
 /* ---------------------------------------- BANNER ---------------------------------------- */
@@ -266,6 +293,76 @@ body {
 }
 
 @media (max-width: 767px) {
+    .header {
+        padding: 15px 0;
+    }
+
+    .header__logo img {
+        max-width: 220px;
+    }
+
+    .header__burger {
+        display: block;
+        position: relative;
+        z-index: 3;
+        width: 30px;
+        height: 20px;
+    }
+
+    .header__burger span {
+        position: absolute;
+        left: 0;
+        top: 9px;
+        background-color: #383b40;
+        width: 100%;
+        height: 2px;
+
+    }
+
+    .header__burger::before, .header__burger::after {
+        content: '';
+        background-color: #383b40;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+    }
+
+    .header__burger::before {
+        top: 0;
+    }
+
+    .header__burger::after {
+        bottom: 0;
+    }
+
+    .header__menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-green-1);
+        padding: 100px 0 0 0;
+    }
+
+    .menu__list {
+        display: block;
+        padding: 0 0 0 15px;
+    }
+
+    .menu__item:not(:last-child) {
+        margin: 0 0 20px 0;
+    }
+
+    .menu__link {
+        font-size: 26px;
+    }
+
+    .menu__link.active {
+        color: #fff;
+    }
+
     .banner__title {
         font-size: calc(36px + (50 - 36 + (50 - 36) * 0.7) * ((100vw - 320px) / 1920));
     }
