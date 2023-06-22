@@ -293,6 +293,10 @@ body {
 }
 
 @media (max-width: 767px) {
+    body.lock {
+        overflow: hidden;
+    }
+
     .header {
         padding: 15px 0;
     }
