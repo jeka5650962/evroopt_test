@@ -316,7 +316,7 @@ body {
         background-color: #383b40;
         width: 100%;
         height: 2px;
-
+        transition: var(--default-transition);
     }
 
     .header__burger::before, .header__burger::after {
@@ -326,6 +326,7 @@ body {
         width: 100%;
         height: 2px;
         left: 0;
+        transition: var(--default-transition);
     }
 
     .header__burger::before {
@@ -336,9 +337,23 @@ body {
         bottom: 0;
     }
 
+    .header__burger.active span {
+        transform: scale(0);
+    }
+
+    .header__burger.active::before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .header__burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
     .header__menu {
         position: fixed;
-        top: 0;
+        top: -100%;
         left: 0;
         width: 100%;
         height: 100%;
@@ -361,6 +376,10 @@ body {
 
     .menu__link.active {
         color: #fff;
+    }
+
+    .page {
+        padding: 76px 0 0 0;
     }
 
     .banner__title {
