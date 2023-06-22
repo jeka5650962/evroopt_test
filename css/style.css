@@ -364,6 +364,7 @@ body {
         background-color: rgba(141, 198, 63, 0.93);
         padding: 100px 0 0 0;
         transition: var(--default-transition);
+        overflow: auto;
     }
 
     .header__menu.active {
@@ -372,7 +373,7 @@ body {
 
     .menu__list {
         display: block;
-        padding: 0 0 0 15px;
+        padding: 0 0 15px 15px;
     }
 
     .menu__item:not(:last-child) {
